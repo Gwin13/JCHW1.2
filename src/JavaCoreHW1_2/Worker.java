@@ -1,7 +1,7 @@
 package JavaCoreHW1_2;
 
 
-public class Worker implements OnTaskDoneListener, OnTaskErrorListener {
+public class Worker {
 
     private final OnTaskDoneListener callback;
     private final OnTaskErrorListener errorCallback;
@@ -20,14 +20,4 @@ public class Worker implements OnTaskDoneListener, OnTaskErrorListener {
             }
         }
     }
-    @Override
-    public void onDone(String result) {
-
-    }
-
-    @Override
-    public void onError(String errorCause) {
-
-    }
-
 }
