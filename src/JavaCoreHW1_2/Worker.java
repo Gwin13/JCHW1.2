@@ -1,18 +1,10 @@
-public class Worker {
-
-    @FunctionalInterface
-    public interface OnTaskDoneListener {
-        void onDone(String result);
-    }
-
-    @FunctionalInterface
-    public interface OnTaskErrorListener {
-        void onError(String errorCause);
-    }
+package JavaCoreHW1_2;
 
 
-    private OnTaskDoneListener callback;
-    private OnTaskErrorListener errorCallback;
+public class Worker implements OnTaskDoneListener, OnTaskErrorListener {
+
+    private final OnTaskDoneListener callback;
+    private final OnTaskErrorListener errorCallback;
 
     public Worker(OnTaskDoneListener callback, OnTaskErrorListener errorCallback) {
         this.callback = callback;
@@ -28,4 +20,14 @@ public class Worker {
             }
         }
     }
+    @Override
+    public void onDone(String result) {
+
+    }
+
+    @Override
+    public void onError(String errorCause) {
+
+    }
+
 }
